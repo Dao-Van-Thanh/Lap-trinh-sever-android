@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input: {
+            width: 30px;
+            height: 10px;
+            border: 1px 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="/tinhtoan" method="post">
+            <input type="number" placeholder="So A" name="soA" value="{{soA}}">
+            <input type="number" placeholder="So B" name="soB" value="{{soB}}">
+            <span>Phép tính</span>
+            <select name="pheptinh">
+                <option value="cong">+</option>
+                <option value="tru">-</option>
+                <option value="nhan">*</option>
+                <option value="chia">/</option>
+            </select name="pheptinh">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    {{#if showKetQua}}
+        <div>
+            <h2>Kết quả: {{ketQua}}</h2>
+        </div>
+    {{/if}}
+</body>
+
+</html>
